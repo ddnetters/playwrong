@@ -44,7 +44,7 @@ test('This test will fail', async ({ page }) => {
 Output:
 ```plaintext
 ✖ This test will fail
-   Error: This test failed because "playwrong" says so! 😂
+   Error: This test failed because "playwrong" says so!
 ```
 
 
