@@ -1,6 +1,6 @@
 {
     "name": "playwrong",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A satirical library to make every playwright test fail.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -34,11 +34,11 @@
         "ts-node": "^10.9.2"
     },
     "keywords": [
-      "npm",
-      "testing",
-      "joke",
-      "satire",
-      "playwright",
-      "playwrong"
+        "npm",
+        "testing",
+        "joke",
+        "satire",
+        "playwright",
+        "playwrong"
     ]
 }
