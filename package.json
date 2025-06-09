@@ -1,6 +1,6 @@
 {
     "name": "playwrong",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A satirical library to make every playwright test fail.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
