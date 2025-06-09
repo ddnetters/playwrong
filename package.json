@@ -40,5 +40,6 @@
         "satire",
         "playwright",
         "playwrong"
-    ]
+    ],
+    "type": "module"
 }

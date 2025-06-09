@@ -33,18 +33,18 @@ yarn add playwrong
 Replace `@playwright/test` with `playwrong` in your tests to embrace failure: ❌
 
 ```typescript
-const { test, expect } = require('playwrong');
+import { test, expect } from 'playwrong';
 
-test('This test will fail', async ({ page }) => {
-    await page.goto('https://example.com');
+test('This test will fail', () => {
     expect(1).toBe(1); // But it will still fail. 💔
 });
 ```
 
 Output:
 ```plaintext
+Running test: This test will fail
 ✖ This test will fail
-   Error: This test failed because "playwrong" says so!
+This test failed because "playwrong" says so!
 ```
 
 
