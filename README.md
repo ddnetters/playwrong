@@ -75,11 +75,34 @@ or more likely:
 🎲 Oops! Clicking randomly at (847, 231) instead.
 ```
 
+### Impatient Waits 😤
+
+`waitForSelector` has an attitude problem. It might wait for your element, or it might just... not.
+
+```typescript
+await chaos.waitForSelector('.loading-spinner', { timeout: 30000 });
+```
+
+40% chance it actually waits. 60% chance you get:
+```plaintext
+⏳ Waiting for ".loading-spinner"... I guess.
+😴 I'm tired of waiting. Life's too short.
+Error: waitForSelector gave up after 1847ms: 😴 I'm tired of waiting. Life's too short.
+```
+
+Other possible excuses:
+- 🥱 "This is boring. I'm done."
+- 😤 "You know what? I have better things to do."
+- 💅 "I've been waiting for like... forever. I'm over it."
+- 🙄 "Still not there? I'm not paid enough for this."
+- ☕ "I need a coffee break. Permanently."
+
 ## Features 🌟
 
 - Every test **fails**—no conditions, no questions. 💀
 - **One simple message**: "This test failed because 'playwrong' says so!" 📝
 - **Chaotic clicks**: 33% accuracy, 67% chaos. 🎲
+- **Impatient waits**: 60% chance of giving up with attitude. 😤
 - Zero configuration: Simple, clean, and guaranteed to disappoint. 🫠
 
 
