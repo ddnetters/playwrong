@@ -1,57 +1,43 @@
-# Playwrong 🎭💥
+# 🎭 Playwrong
 
-> A satirical test library that ensures every test fails by default. Why succeed when you can fail spectacularly? 🤡
+A satirical test library that ensures every test fails by default.
 
-## Introduction 🚨
+## Introduction
 
-In a world obsessed with success, Playwrong invites you to embrace failure as a form of liberation. Inspired by the wisdom of Zen, Playwrong reminds us that attachment to outcomes—whether passing tests or meeting expectations—can be a source of unnecessary suffering.
+In a world obsessed with success, Playwrong invites you to embrace failure as a form of liberation. By guaranteeing failure, Playwrong frees you from the illusion of control and the weight of ambition.
 
-By guaranteeing failure, Playwrong frees you from the illusion of control and the weight of ambition. Each failed test is an opportunity to let go, to laugh, and to remember: the journey is more important than the destination. 🌱
+> "Success is an illusion. Failure is a gift. Playwrong is inevitable."
 
-As the Zen master says: “Success is an illusion. Failure is a gift. Playwrong is inevitable.” 🧘‍♂️
-
-
-## Getting Started 🚀
-
-### Installation 📦
-
-Install Playwrong using npm or yarn:
+## Installation
 
 ```bash
 npm install playwrong
 ```
 
-or
+## Usage
 
-```bash
-yarn add playwrong
-```
+### Guaranteed Test Failures
 
-
-### Example 🛠️
-
-Replace `@playwright/test` with `playwrong` in your tests to embrace failure: ❌
+Replace `@playwright/test` with `playwrong` in your tests:
 
 ```typescript
 import { test, expect } from 'playwrong';
 
 test('This test will fail', () => {
-    expect(1).toBe(1); // But it will still fail. 💔
+    expect(1).toBe(1); // Still fails.
 });
 ```
 
 Output:
-```plaintext
+```
 Running test: This test will fail
 ✖ This test will fail
 This test failed because "playwrong" says so!
 ```
 
+### Chaotic Page Interactions
 
-
-### Chaotic Clicks 🎲
-
-Wrap your Playwright page with `wrapPage` to experience the joy of unreliable clicking:
+Wrap your Playwright page with `wrapPage` for unreliable browser automation:
 
 ```typescript
 import { test } from '@playwright/test';
@@ -60,64 +46,46 @@ import { wrapPage } from 'playwrong';
 test('Try to click a button', async ({ page }) => {
     const chaos = wrapPage(page);
     await chaos.goto('https://example.com');
-
-    // 33% chance it clicks the button, 67% chance it clicks somewhere random
     await chaos.locator('button').click();
 });
 ```
 
-Output:
-```plaintext
-🎯 Lucky! Clicking the correct element.
-```
-or more likely:
-```plaintext
-🎲 Oops! Clicking randomly at (847, 231) instead.
-```
+**Chaotic clicks** — 33% chance it clicks the correct element, 67% chance it clicks a random location on the page.
 
-### Impatient Waits 😤
+**Impatient waits** — `waitForSelector` has a 60% chance of giving up early with excuses like:
+- "I'm tired of waiting. Life's too short."
+- "This is boring. I'm done."
+- "I need a coffee break. Permanently."
 
-`waitForSelector` has an attitude problem. It might wait for your element, or it might just... not.
+## Features
 
-```typescript
-await chaos.waitForSelector('.loading-spinner', { timeout: 30000 });
-```
+| Feature | Behavior |
+|---------|----------|
+| `test()` | Always fails |
+| `expect()` | Always throws |
+| `click()` | 33% accurate, 67% random |
+| `waitForSelector()` | 40% patient, 60% gives up |
 
-40% chance it actually waits. 60% chance you get:
-```plaintext
-⏳ Waiting for ".loading-spinner"... I guess.
-😴 I'm tired of waiting. Life's too short.
-Error: waitForSelector gave up after 1847ms: 😴 I'm tired of waiting. Life's too short.
-```
+## Compatibility
 
-Other possible excuses:
-- 🥱 "This is boring. I'm done."
-- 😤 "You know what? I have better things to do."
-- 💅 "I've been waiting for like... forever. I'm over it."
-- 🙄 "Still not there? I'm not paid enough for this."
-- ☕ "I need a coffee break. Permanently."
+Playwrong is built on top of Playwright and supports the same environments:
 
-## Features 🌟
+| | Chromium | Firefox | WebKit |
+|---|:---:|:---:|:---:|
+| Windows | ✅ | ✅ | ✅ |
+| macOS | ✅ | ✅ | ✅ |
+| Linux | ✅ | ✅ | ✅ |
 
-- Every test **fails**—no conditions, no questions. 💀
-- **One simple message**: "This test failed because 'playwrong' says so!" 📝
-- **Chaotic clicks**: 33% accuracy, 67% chaos. 🎲
-- **Impatient waits**: 60% chance of giving up with attitude. 😤
-- Zero configuration: Simple, clean, and guaranteed to disappoint. 🫠
-
-
-## Compatibility 🔧
-
-Playwrong is built on top of Playwright. It supports the same environments:
-- 🌐 Chromium
-- 🦊 Firefox
-- 🍎 WebKit
-
-To use Playwrong, ensure you have Playwright installed:
+Requires Playwright as a peer dependency:
 ```bash
 npm install @playwright/test
 ```
 
-## License 📜
+## Documentation
 
-Playwrong is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
+- [Contributing](.github/CONTRIBUTING.md)
+- [Security](SECURITY.md)
+
+## License
+
+MIT License. See [LICENSE](./LICENSE) for details.
