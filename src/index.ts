@@ -1,5 +1,6 @@
 import { failTest } from './fail';
 import { ERROR_MESSAGE } from './constants';
+export { wrapPage } from './page';
 
 // Export the test function to simulate Playwright's API
 export const test = (description: string, testFn: () => void): void => {

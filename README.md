@@ -49,10 +49,37 @@ This test failed because "playwrong" says so!
 
 
 
+### Chaotic Clicks 🎲
+
+Wrap your Playwright page with `wrapPage` to experience the joy of unreliable clicking:
+
+```typescript
+import { test } from '@playwright/test';
+import { wrapPage } from 'playwrong';
+
+test('Try to click a button', async ({ page }) => {
+    const chaos = wrapPage(page);
+    await chaos.goto('https://example.com');
+
+    // 33% chance it clicks the button, 67% chance it clicks somewhere random
+    await chaos.locator('button').click();
+});
+```
+
+Output:
+```plaintext
+🎯 Lucky! Clicking the correct element.
+```
+or more likely:
+```plaintext
+🎲 Oops! Clicking randomly at (847, 231) instead.
+```
+
 ## Features 🌟
 
 - Every test **fails**—no conditions, no questions. 💀
 - **One simple message**: "This test failed because 'playwrong' says so!" 📝
+- **Chaotic clicks**: 33% accuracy, 67% chaos. 🎲
 - Zero configuration: Simple, clean, and guaranteed to disappoint. 🫠
 
 
